@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clientregister"
+    android:orientation="vertical">
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/img1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLIENT REGISTER"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="40dp"
+        android:textSize="25dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="25dp"
+
+        android:hint="Email-ID"
+
+        android:id="@+id/cregemail"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="25dp"
+        android:hint="Password"
+
+        android:id="@+id/cregpass"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="REGISTER"
+        android:layout_marginTop="40dp"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:background="#A142ed"
+        android:id="@+id/clreg"
+        />
+</LinearLayout>

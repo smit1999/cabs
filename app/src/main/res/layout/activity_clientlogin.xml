@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clientloginActivity"
+    android:background="#00ffee"
+    android:orientation="vertical">
+<ImageView
+    android:src="@mipmap/ic_launcher"
+    android:layout_marginTop="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/img1"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CUSTOMER LOGIN"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="40dp"
+        android:textSize="25dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        android:hint="Email-ID"
+        android:id="@+id/clemail"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"
+        android:hint="Password"
+        android:id="@+id/clpass"
+
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="LOGIN"
+
+
+        android:layout_marginTop="40dp"
+        android:textSize="25dp"
+        android:background="#0000ff"
+        android:id="@+id/cllogin"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dont have a account?"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+
+        android:textSize="30dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ff0000"
+        android:text="REGISTER"
+
+        android:layout_marginTop="40dp"
+        android:textSize="25dp"
+        android:id="@+id/clreg"
+        />
+</LinearLayout>
