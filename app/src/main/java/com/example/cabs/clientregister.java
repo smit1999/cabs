@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -15,6 +16,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class clientregister extends AppCompatActivity {
     private EditText email1;
@@ -22,6 +25,8 @@ public class clientregister extends AppCompatActivity {
     private Button register;
     private ProgressDialog loadbar;
     FirebaseAuth mAuth;
+     DatabaseReference clregdb;
+     String clid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,7 @@ public class clientregister extends AppCompatActivity {
         register=(Button)findViewById(R.id.clreg);
         loadbar=new ProgressDialog(this);
         mAuth=FirebaseAuth.getInstance();
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,8 +66,18 @@ public class clientregister extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
+                        clid=mAuth.getCurrentUser().getUid();
+                        clregdb=FirebaseDatabase.getInstance().getReference().child("Users").child("Clients").child("client_id").child(clid);
+                        clregdb.setValue(true);
+                        Intent in =new Intent(clientregister.this,clmaps.class);
+                        startActivity(in);
+                        Toast.makeText(clientregister.this,"User registered succesfully ",Toast.LENGTH_SHORT).show();
+                        loadbar.dismiss();
 
-                        Toast.makeText(clientregister.this,"User registerd succesfully",Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        Toast.makeText(clientregister.this,"User cannot be registered ",Toast.LENGTH_SHORT).show();
                         loadbar.dismiss();
                     }
                 }

@@ -6,24 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".splashscreen"
     android:orientation="vertical"
-    android:background="#ecad">
+    android:background="#000000">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"
         android:layout_marginTop="200dp"
-        android:layout_marginLeft="170dp"/>
+        android:layout_marginLeft="140dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Powered BY \nSMIT VORA"
+
+        android:text="POWERED BY \n\n\t\tSMIT VORA"
         android:layout_marginTop="100dp"
         android:padding="30dp"
-        android:layout_marginLeft="70dp"
+        android:layout_marginLeft="50dp"
         android:textSize="30dp"
-        android:textColor="#ffffff"
+
+        android:textColor="#ff0000"
         android:textStyle="bold"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="serif"
         />
 
 

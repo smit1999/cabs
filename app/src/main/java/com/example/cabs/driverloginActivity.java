@@ -39,7 +39,7 @@ public class driverloginActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent reg=new Intent(driverloginActivity.this,drivermaps.class);
+                Intent reg=new Intent(driverloginActivity.this,driverregister.class);
                 startActivity(reg);
             }
         });
@@ -72,6 +72,7 @@ public class driverloginActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
+
                         Intent loged=new Intent(driverloginActivity.this,drivermaps.class);
                         Toast.makeText(driverloginActivity.this,"Login successful",Toast.LENGTH_SHORT).show();
                         loadbar.dismiss();

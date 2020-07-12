@@ -70,7 +70,7 @@ ProgressDialog loadbar;
                  public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
-                        Intent loged=new Intent(clientloginActivity.this,drivermaps.class);
+                        Intent loged=new Intent(clientloginActivity.this,clmaps.class);
                         Toast.makeText(clientloginActivity.this,"Login successful",Toast.LENGTH_SHORT).show();
                                 loadbar.dismiss();
                         startActivity(loged);

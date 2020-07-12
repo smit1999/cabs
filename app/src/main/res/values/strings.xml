@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">cabs</string>
     <string name="title_activity_drivermaps">Map</string>
+    <string name="title_activity_clmaps">Map</string>
 </resources>
